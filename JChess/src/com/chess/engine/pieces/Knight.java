@@ -39,5 +39,9 @@ public class Knight extends Piece {
 		}
 		return Collections.unmodifiableList(legalMoves);
 	}
+	
+	private static boolean isFirstColumnExclusion(final int currentPosition, final int offset) {
+		return BoardUtils.FIRST_COLUMN[currentPosition] && ((offset == -17) || (offset == -10));
+	}
 
 }
