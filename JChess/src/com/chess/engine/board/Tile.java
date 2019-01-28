@@ -12,7 +12,7 @@ public abstract class Tile {
 
 	private static final Map<Integer, EmptyTile> EMPTY_TILES_CACHE = createAllPossibleEmptyTiles();
 
-	Tile(int coordinates) {
+	private Tile(int coordinates) {
 		tileCoordinates = coordinates;
 	}
 
@@ -73,7 +73,7 @@ public abstract class Tile {
 
 		@Override
 		public Piece getPiece() {
-			return null;
+			return piece;
 		}
 	}
 
